@@ -51,13 +51,13 @@ function deCoder() {
 
     let codeCheck = codedPhrase.split('');
 
-    // for(i=0; i<codeCheck.length; i++){
-    //     for(j=0; j<vocab.length; j++){
-    //         if(codeCheck[i] == vocab.symBol[j]){
-    //             finalPhrase.push(vocab.meaning[i])
-    //         }
-    //     }
-    // }
+    for(i=0; i<codeCheck.length; i++){
+        for(j=0; j<vocab.length; j++){
+            if(codeCheck[i] == vocab.symBol[j]){
+                finalPhrase.push(vocab.meaning[i])
+            }
+        }
+    }
 
     for(i=0; i<vocab.length; i++){
         console.log(vocab.meaning[i])
