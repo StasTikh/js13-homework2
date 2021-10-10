@@ -1,6 +1,58 @@
 function deCoder() {
-    let vocab = [
-        {symBol: 'a', meaning: 'Alpha'},
+    let vocab = {
+        symBol: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+                 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+                 'q', 'r', 's', 't', 'y', 'v', 'w', 'x',
+                 'y', 'z', '0', '1', '2', '3', '4', '5',
+                 '6', '7', '8', '9'],
+        meaNing: ['Alpha', 'Bravo', 'Charlie', 'Delta', 
+                  'Echo', 'Foxtrot', 'Golf', 'Hotel',
+                  'Kilo', 'Lima', 'Mike', 'November',
+                  'Oscar', 'Papa', 'Quebec', 'Romeo',
+                  'Sierra', 'Tango', 'Uniform', 'Victor',
+                  'Whiskey', 'X-Ray', 'Yankee', 'Zulu',
+                  'Zero', 'One', 'Two', 'Three', 'Four',
+                  'Five', 'Six', 'Seven', 'Eight', 'Nine' 
+                ]
+    }
+        
+    
+
+
+    let codedPhrase = inputCode.value;
+    let finalPhrase = [];
+
+
+    if (codedPhrase == codedPhrase.toUpperCase()) {
+        codedPhrase = codedPhrase.toLowerCase();    
+    }
+    //console.log(codedPhrase);
+
+    let codeCheck = codedPhrase.split('');
+
+    console.log(codeCheck);
+
+    for(i=0; i<vocab.symBol.length; i++){
+        for(j=0; j<codeCheck.length; j++){
+            if(codeCheck[j] == vocab.symBol[i]){
+                finalPhrase.push(vocab.meaNing[i-2])
+                console.log(finalPhrase);
+            }
+        }
+    }
+
+
+
+console.log(finalPhrase);
+//outputCode.innerHTML = `The frase is ${finalPhrase}`;
+
+}
+
+
+
+
+/*
+{symBol: 'a', meaning: 'Alpha'},
         {symBol: 'b', meaning: 'Bravo'},
         {symBol: 'c', meaning: 'Charlie'},
         {symBol: 'd', meaning: 'Delta'},
@@ -37,35 +89,4 @@ function deCoder() {
         {symBol: '8', meaning: 'Eight'},
         {symBol: '9', meaning: 'Nine'},
         {symBol: '100', meaning: 'hundred'}
-    ]
-
-
-    let codedPhrase = inputCode.value;
-    let finalPhrase = [];
-
-
-    if (codedPhrase == codedPhrase.toUpperCase()) {
-        codedPhrase = codedPhrase.toLowerCase();    
-    }
-    console.log(codedPhrase);
-
-    let codeCheck = codedPhrase.split('');
-
-    for(i=0; i<codeCheck.length; i++){
-        for(j=0; j<vocab.length; j++){
-            if(codeCheck[i] == vocab.symBol[j]){
-                finalPhrase.push(vocab.meaning[i])
-            }
-        }
-    }
-
-    for(i=0; i<vocab.length; i++){
-        console.log(vocab.meaning[i])
-    }
-
-
-console.log(codeCheck);
-
-outputCode.innerHTML = `The frase is ${finalPhrase}`;
-
-}
+        */
