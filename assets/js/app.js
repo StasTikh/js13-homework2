@@ -5,15 +5,15 @@ function deCoder() {
                  'q', 'r', 's', 't', 'y', 'v', 'w', 'x',
                  'y', 'z', '0', '1', '2', '3', '4', '5',
                  '6', '7', '8', '9'],
-        meaNing: ['Alpha', 'Bravo', 'Charlie', 'Delta', 
-                  'Echo', 'Foxtrot', 'Golf', 'Hotel',
-                  'India', 'Juliett', 'Kilo', 'Lima',
-                  'Mike', 'November', 'Oscar', 'Papa',
-                  'Quebec', 'Romeo', 'Sierra', 'Tango',
-                  'Uniform', 'Victor', 'Whiskey', 'X-Ray',
-                  'Yankee', 'Zulu', 'Zero', 'One', 'Two',
-                  'Three', 'Four', 'Five', 'Six', 'Seven',
-                  'Eight', 'Nine']
+        meaNing: [' Alpha', ' Bravo', ' Charlie', ' Delta', 
+                  ' Echo', '  Foxtrot', ' Golf', ' Hotel',
+                  ' India', ' Juliett', ' Kilo', ' Lima',
+                  ' Mike', ' November', ' Oscar', ' Papa',
+                  ' Quebec', ' Romeo', ' Sierra', ' Tango',
+                  ' Uniform', ' Victor', ' Whiskey', ' X-Ray',
+                  ' Yankee', ' Zulu', ' Zero', ' One', ' Two',
+                  ' Three', ' Four', ' Five', ' Six', ' Seven',
+                  ' Eight', ' Nine']
     }
         
     let codedPhrase = inputCode.value;
