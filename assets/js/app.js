@@ -16,26 +16,17 @@ function deCoder() {
                   ' Eight', ' Nine']
     }
         
-    let codedPhrase = inputCode.value;
+    let codedPhrase = inputCode.value.toLowerCase();
     let finalPhrase = [];
-    let codeCheck = codedPhrase.split('');
-    
-    
-    for(i=0; i<codeCheck.length; i++){
-        if (codeCheck[i] == codeCheck[i].toUpperCase()) {
-            codeCheck[i] = codeCheck[i].toLowerCase();
-            console.log(codeCheck);       
-        }
-    }
-    
-    for(i=0; i<codeCheck.length; i++){
+
+    for (i=0; i<codedPhrase.length; i++) {
         for(k=0; k<vocab.meaNing.length; k++) {
-            if(codeCheck[i] === vocab.symBol[k]) {
+            if(codedPhrase[i] === vocab.symBol[k]) {
                 finalPhrase.push(vocab.meaNing[k])
             }
         }
     }
-
+    
     outputCode.innerHTML = `The frase is ${finalPhrase}`;
 
 }
